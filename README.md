@@ -36,21 +36,19 @@ Kurento uses a cerficate file that combines private key, certificate and interme
 
 ### Part III - Modify configuration files under `/etc/kurento`
 
-**_/etc/kurento/kurento.conf.json_**: The main configuration file to provide settings of Kurento Media Server. Defines the WebSocket(WS)/WebSocket Secure(WSS) ports and path to combo certificates
+**_/etc/kurento/kurento.conf.json_**: The main configuration file to provide settings of Kurento Media Server. Defines the WebSocket(WS)/WebSocket Secure(WSS) ports and path to combo certificates. See https://doc-kurento.readthedocs.io/en/6.9.0/features/security.html#configure-kurento-media-server-to-use-secure-websocket-wss for more details. <sup>[1](#fn1)</sup>
+
+**_/etc/kurento/modules/kurento/WebRtcEndpoint.conf.ini_**: Specific parameters for WebRtcEndpoint.<sup>[1](#fn1)</sup>
+
 
 **_/etc/kurento/modules/kurento/MediaElement.conf.ini_**: Generic parameters for all kinds of MediaElement.
 
 **_/etc/kurento/modules/kurento/SdpEndpoint.conf.ini_**: Audio/video parameters for SdpEndpoints (i.e. WebRtcEndpoint and RtpEndpoint).
 
-**_/etc/kurento/modules/kurento/WebRtcEndpoint.conf.ini_**: Specific parameters for WebRtcEndpoint.
 
 **_/etc/kurento/modules/kurento/HttpEndpoint.conf.ini_**: Specific parameters for HttpEndpoint.
 
-NOTE: For ACE Direct, check repo directory in **acedirect-kurento/confs/kurento/** for the examples.
 
 ---
-#### changelog
-* 5-MAY-2020
-  - Initial Version
-* 18-MAY-2020
-  - Add Certificate and Configurations Sections
+<a name="fn1"><sup>[1]</sup></a> Check repo directory in **acedirect-kurento/confs/kurento/** for the examples
+<a name="fn2"><sup>[2]</sup></a> Check the [Kurento Github](https://github.com/Kurento/kms-core/tree/6.11.0/src/server/config) page
